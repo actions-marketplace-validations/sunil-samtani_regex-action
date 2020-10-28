@@ -25,6 +25,7 @@ try {
   console.log('Found:', matches);
   console.log('set output "first_match":', matches[0]);
   core.setOutput('first_match', matches[0]);
+  core.setOutput('match_grp', matches[1]);
 } catch (error) {
   core.setFailed(error.message);
 }
