@@ -13,6 +13,8 @@ inputs:
 outputs:
   first_match:
     description: "first regex match"
+  match_grp:
+    description: "first regex group"  
 
 runs:
   using: "node12"
