@@ -2,14 +2,10 @@ const core = require('@actions/core');
 
 try {
   let regexPattern = core.getInput('regex_pattern');
-  let regexFlags = core.getInput('regex_flags');
+  let regexFlags = ''
   let searchString = core.getInput('search_string');
   if (!regexPattern) {
     core.setFailed('regex_pattern input is required');
-    return;
-  }
-  if (!regexFlags) {
-    regexFlags = '';
     return;
   }
   if (!searchString) {
@@ -24,6 +20,7 @@ try {
   }
   console.log('Found:', matches);
   console.log('set output "first_match":', matches[0]);
+  console.log('set output "match_grp":', matches[1]);
   core.setOutput('first_match', matches[0]);
   core.setOutput('match_grp', matches[1]);
 } catch (error) {

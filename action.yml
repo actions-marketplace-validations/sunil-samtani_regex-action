@@ -4,9 +4,6 @@ inputs:
   regex_pattern:
     description: "regex pattern"
     required: true
-  regex_flags:
-    description: "regex flag"
-    required: true
   search_string:
     description: "search string"
     required: true
