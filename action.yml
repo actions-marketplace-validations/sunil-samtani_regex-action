@@ -1,4 +1,4 @@
-name: "Match a string against a regex pattern"
+name: "Match a string against a regex pattern and return matched group"
 description: "Match a string against a regex pattern and output first match"
 inputs:
   regex_pattern:
